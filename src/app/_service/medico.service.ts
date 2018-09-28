@@ -32,6 +32,6 @@ export class MedicoService {
   }
 
   eliminar(id: number){
-    return this.http.delete(`${this.url}/${id}`,,{responseType: 'text' });
+    return this.http.delete(`${this.url}/${id}`,{responseType: 'text' });
   }
 }
