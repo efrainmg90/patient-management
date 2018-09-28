@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { PacienteComponent } from './pages/paciente/paciente.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PacienteEdicionComponent } from './pages/paciente/paciente-edicion/paciente-edicion.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { PacienteEdicionComponent } from './pages/paciente/paciente-edicion/paci
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
