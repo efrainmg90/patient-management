@@ -8,12 +8,16 @@ import { PacienteComponent } from './pages/paciente/paciente.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PacienteEdicionComponent } from './pages/paciente/paciente-edicion/paciente-edicion.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MedicoComponent } from './pages/medico/medico.component';
+import { DialogoComponent } from './pages/medico/dialogo/dialogo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PacienteComponent,
-    PacienteEdicionComponent
+    PacienteEdicionComponent,
+    MedicoComponent,
+    DialogoComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +27,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
+  entryComponents: [DialogoComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
