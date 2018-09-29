@@ -1,8 +1,6 @@
 <mat-toolbar>Examenes</mat-toolbar>
-
-<div class="example-container mat-elevation-z8">
-
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<div class="example-container mat-elevation-z8" *ngIf="route.children.length === 0">
 
   <div class="example-header">
     <mat-form-field>
@@ -43,6 +41,6 @@
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
 
-<button mat-fab color="accent" style="float: right; margin-right: 20px" routerLink='/examen/nuevo'>
+<button mat-fab color="accent" *ngIf="route.children.length === 0" style="float: right; margin-right: 20px" routerLink='/examen/nuevo'>
   <mat-icon>create</mat-icon>
 </button>

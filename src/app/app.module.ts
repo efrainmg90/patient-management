@@ -12,6 +12,8 @@ import { MedicoComponent } from './pages/medico/medico.component';
 import { DialogoComponent } from './pages/medico/dialogo/dialogo.component';
 import { ExamenComponent } from './pages/examen/examen.component';
 import { ExamenEdicionComponent } from './pages/examen/examen-edicion/examen-edicion.component';
+import { EspecialidadComponent } from './pages/especialidad/especialidad.component';
+import { EspecialidadEdicionComponent } from './pages/especialidad/especialidad-edicion/especialidad-edicion.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ExamenEdicionComponent } from './pages/examen/examen-edicion/examen-edi
     MedicoComponent,
     DialogoComponent,
     ExamenComponent,
-    ExamenEdicionComponent
+    ExamenEdicionComponent,
+    EspecialidadComponent,
+    EspecialidadEdicionComponent
   ],
   imports: [
     BrowserModule,
