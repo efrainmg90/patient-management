@@ -14,6 +14,7 @@ export class PacienteComponent implements OnInit {
   displayedColumns = ['idPaciente', 'nombres', 'apellidos', 'acciones'];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
+  cantidad:number;
 
   constructor(private pacienteService : PacienteService,private snackBar: MatSnackBar) { }
 
@@ -30,11 +31,23 @@ export class PacienteComponent implements OnInit {
     });
     //end process
 
-    this.pacienteService.listar().subscribe(data => {
-      this.dataSource = new MatTableDataSource(data);
-      this.dataSource.paginator = this.paginator;
+    this.pacienteService.listarPageable(0,10).subscribe((data:any) => {
+      this.dataSource = new MatTableDataSource(data.content);
+      this.cantidad = data.totalElements;
+      //this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
     });
+  }
+
+  mostrarMas(event:any){
+    this.pacienteService.listarPageable(event.pageIndex,event.pageSize).subscribe((data:any)=>{
+      console.log(data.content);
+      this.dataSource = new MatTableDataSource(data.content);
+      this.cantidad = data.totalElements;
+      //this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
+    
   }
 
   applyFilter(filterValue: string) {

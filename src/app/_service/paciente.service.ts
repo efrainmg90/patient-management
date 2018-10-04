@@ -19,6 +19,11 @@ export class PacienteService {
     return this.http.get<Paciente[]>(this.url);
   }
 
+  listarPageable(page:number,size:number){
+    return this.http.get<Paciente[]>(`${this.url}/pageable?page=${page}&size=${size}`);
+  }
+
+
   listarPacientePorId(id: number){
     return this.http.get<Paciente>(`${this.url}/${id}`);
   }
