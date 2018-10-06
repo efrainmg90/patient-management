@@ -1,6 +1,6 @@
 export class DetalleConsulta{
-    id_detalle: number;
-    idconsulta: number;
+    idDetalle: number;
+    idConsulta: number;
     diagnostico: string ;
     tratamiento: string ;
 }
