@@ -1,3 +1,4 @@
+import { EspecialComponent } from './pages/consulta/especial/especial.component';
 import { EspecialidadEdicionComponent } from './pages/especialidad/especialidad-edicion/especialidad-edicion.component';
 import { EspecialidadComponent } from './pages/especialidad/especialidad.component';
 import { ExamenEdicionComponent } from './pages/examen/examen-edicion/examen-edicion.component';
@@ -8,6 +9,8 @@ import { PacienteComponent } from './pages/paciente/paciente.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
+import { ReporteComponent } from './pages/reporte/reporte.component';
 
 const routes: Routes = [
   {
@@ -29,7 +32,10 @@ const routes: Routes = [
     ]
   },
   { path: 'medico', component: MedicoComponent },
-  {path:'consulta', component:ConsultaComponent}
+  {path:'consulta', component:ConsultaComponent},
+  { path: 'consulta-especial', component: EspecialComponent},
+  {path: 'buscar', component: BuscarComponent},
+  {path: 'reporte', component: ReporteComponent}
 ];
 
 @NgModule({

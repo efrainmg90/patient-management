@@ -1,3 +1,4 @@
+import { ConsultaExamen } from './../_model/ConsultaExamen';
 import { HttpClient } from '@angular/common/http';
 import { HOST } from './../_shared/var.constant';
 import { Examen } from './../_model/examen';
@@ -32,5 +33,9 @@ export class ExamenService {
 
   eliminar(id: number){
     return this.http.delete(`${this.url}/${id}`,{responseType: 'text' });
+  }
+
+  listarExamenPorConsulta(idConsulta: number){
+    return this.http.get<ConsultaExamen[]>(`${HOST}/consultaexamenes/${idConsulta}`)
   }
 }

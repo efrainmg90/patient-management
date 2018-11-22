@@ -16,6 +16,10 @@ import { EspecialidadComponent } from './pages/especialidad/especialidad.compone
 import { EspecialidadEdicionComponent } from './pages/especialidad/especialidad-edicion/especialidad-edicion.component';
 import { ConsultaComponent } from './pages/consulta/consulta.component';
 import { EspecialComponent } from './pages/consulta/especial/especial.component';
+import { BuscarComponent } from './pages/buscar/buscar.component';
+import { DialogoDetalleComponent } from './pages/buscar/dialogo-detalle/dialogo-detalle.component';
+import { ReporteComponent } from './pages/reporte/reporte.component';
+import { PdfViewerModule } from "ng2-pdf-viewer";
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import { EspecialComponent } from './pages/consulta/especial/especial.component'
     EspecialidadComponent,
     EspecialidadEdicionComponent,
     ConsultaComponent,
-    EspecialComponent
+    EspecialComponent,
+    BuscarComponent,
+    DialogoDetalleComponent,
+    ReporteComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +44,10 @@ import { EspecialComponent } from './pages/consulta/especial/especial.component'
     MaterialModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    PdfViewerModule
   ],
-  entryComponents: [DialogoComponent],
+  entryComponents: [DialogoComponent,DialogoDetalleComponent],
   providers: [],
   bootstrap: [AppComponent]
 })
